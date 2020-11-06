@@ -1,0 +1,26 @@
+.DataCliente{
+    display: flex;
+    justify-content: space-around;
+    height: auto;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid #ccc;
+}
+
+.DataCliente > summary {
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+.DataCliente > span{
+    width: calc(100% - 10px);
+    padding: 5px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.10rem;
+    display: block;
+    border-top: 1px solid #ccc;
+    cursor: pointer;
+}

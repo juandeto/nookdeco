@@ -1,0 +1,49 @@
+.MediumRespaldo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+.MediumRespaldo > h1{
+    color: #1F1513;
+    letter-spacing: 0.13rem;
+    margin-bottom: 50px;
+}
+
+.MediumRespaldo .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.MediumRespaldo .container > a{
+    text-transform: uppercase;
+    padding: 15px;
+    font-weight: 600;
+    margin: 20px;
+    outline: #fff4ec;
+    border: 2px solid #06D6A0;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    border-radius: 6px;
+    background-color: #06D6A0;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 2px 2px rgba(0,0,0,0.15);
+letter-spacing: 0.12rem;
+justify-content: center;
+}
+
+.MediumRespaldo .container > a > span{
+    text-align: center;
+    width: 140px;
+}
+
+.MediumRespaldo .container > a:hover{
+    color: #06D6A0;
+    background-color: white;
+}

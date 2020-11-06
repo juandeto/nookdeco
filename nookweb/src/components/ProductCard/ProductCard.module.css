@@ -1,0 +1,55 @@
+.productCard{
+    letter-spacing: 0.11rem;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    width: calc(100% - 22px);
+    margin: 0 auto;
+    min-height: 100px;
+    border: 1px solid rgba(64, 65, 69, 0.1);
+    border-left: 0;
+    border-right: 0;
+    padding: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s all ease;
+}
+
+.productCard > h3{
+   color: rgb(64, 65, 69);
+}
+
+.productCard > p{
+    color: rgb(92, 92, 92);
+}
+
+.options{
+display: flex;
+width: 100%;
+align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.remover{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.09rem;
+    cursor: pointer;
+    color: tomato;
+    margin: 0 15px;
+}
+.verDetalle:hover,
+.remover:hover{
+    text-decoration: underline;
+}
+
+.verDetalle{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.09rem;
+    cursor: pointer;
+    color: rgb(0, 153, 255);
+    margin: 0 15px;
+}

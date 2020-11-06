@@ -1,0 +1,59 @@
+
+
+.ArrowRight{
+    position: absolute;
+    top: 9px;
+    cursor: pointer;
+    z-index: 2;
+    left: 78%;
+    color: #404145;
+   display: flex;
+   flex-direction: column-reverse;
+   justify-content: center;
+   border-radius: 10px;
+   padding: 4px;
+   background-color: beige;
+}
+
+.ArrowRight:hover{
+    background-color: beige;
+}
+
+.ArrowRight > span{
+    text-align: center;
+    color: hsl(228, 4%, 26%);
+    font-size: 0.8rem;
+}
+
+
+.ArrowRight > svg{
+    height: 30px;
+}
+
+
+@media (min-width: 500px){
+
+    .ArrowRight{
+        top: 0px;
+    }
+    
+.ArrowRight > span{
+    text-align: center;
+    padding: 3px;
+    color: hsl(228, 4%, 26%);
+    font-size: 1rem;
+}
+
+}
+
+
+@media (min-width: 1000px){
+    .ArrowRight{
+        left: 86%;
+    }
+    .ArrowRight > svg{
+        height: 50px;
+    }
+    
+
+}

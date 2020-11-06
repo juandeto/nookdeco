@@ -1,0 +1,41 @@
+.QuienesSomos{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
+    margin: 10px auto;
+}
+
+.title{
+    color: #404145;
+    align-self: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.section{
+    width: 100%;
+    margin: 0 auto;
+    border-top: 1px solid#ccc;
+    padding-top: 10px;
+}
+
+.paragraph{
+    line-height: 30px;
+    color: #404145;
+    text-align: justify;
+    white-space: normal;
+    font-size: 1rem;
+    letter-spacing: 0.08rem;
+}
+
+@media (min-width: 550px){
+
+    .QuienesSomos{
+        padding: 15px;
+        margin: 40px auto;
+    }
+    .section{
+        width: 80vh;
+    }
+}

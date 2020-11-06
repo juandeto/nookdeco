@@ -1,0 +1,99 @@
+.Modelos > h2{
+    text-align: center;
+    letter-spacing: 0.11rem;
+    font-size: 1rem;
+    padding: 20px 0;
+    margin-block-start: 0.0em;
+    margin-block-end: 0.00em;
+    letter-spacing: 0.11rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #404145;
+    background-color: beige;
+}
+
+.Modelos > .modeloOptions{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.Modelos > .modeloOptions > .item{
+    display: flex;
+    padding: 25px 15px;
+    justify-content: space-between;
+    letter-spacing: 0.11rem;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    color: #404145;
+    border-bottom: 1px solid rgba(64, 65, 69, 0.1);
+    cursor: pointer;
+}
+
+.tipo{
+    width: 140px;
+    text-align: left;
+    margin: 0 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.verEjemplo{
+    text-align: center;
+    align-self: center;
+    padding: 5px;
+}
+
+.verEjemplo:hover{
+    color: #111;
+    font-weight: 600;
+}
+
+.precio{
+    font-size: 0.8rem;
+    color: gray;
+    width: 50px;
+    align-self: center;
+}
+
+.fill{
+    background-color: beige;
+    box-shadow: inset 2px 2px 0px 0px rgba(64,65,69,0.75), inset -2px -2px 0px 0px rgba(64,65,69,0.42);;
+    -webkit-box-shadow: inset 2px 2px 0px 0px rgba(64,65,69,0.75), inset -2px -2px 0px 0px rgba(64,65,69,,0.42);
+-moz-box-shadow: inset 2px 2px 0px 0px rgba(64,65,69,0.75), inset -2px -2px 0px 0px rgba(64,65,69,0.42);
+font-weight: bold;
+}
+
+.item:hover{
+    background-color: beige;
+}
+.guideline{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 20px 14px;
+    color: #404145;
+    background-color: beige;
+    font-weight:500;
+    letter-spacing: 0.11rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 0.7rem;
+}
+
+
+
+@media (min-width: 300px){
+    .guidelineEjemplo{
+        margin-left: 85px;
+    }
+}
+
+
+@media (min-width: 730px){
+    .guidelineEjemplo{
+        margin-left: 85px;
+    }
+}

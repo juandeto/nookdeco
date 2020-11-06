@@ -1,0 +1,85 @@
+
+.title{
+    text-align: center;
+    color: #404145;
+}
+
+.orderContainer{
+    max-width: 120vh;
+    width: 100%;
+    min-height: 100px;
+    border: 1px solid #ccc;
+    margin: 20px auto;
+}
+
+.AdminLayout{
+    padding: 15px;
+    margin: 0 auto;
+    min-width: 80vh;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.btns{
+    display: flex;
+    justify-content: space-around;
+}
+.btns {
+    margin: 20px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.saveBtn{
+    border-radius: 10px;
+    display: inline-block;
+    background-color: greenyellow;
+    color: #404145;
+    font-weight: bold;
+    padding: 10px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    height: 100%;
+}
+.logoutBtn{
+    border-radius: 10px;
+    border: 2px solid  rgb(182, 95, 13);
+    text-decoration: none;
+    display: inline-block;
+    background-color: white;
+    color: rgb(182, 95, 13);
+    font-weight: bold;
+    padding: 10px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    height: 100%;
+}
+
+.logoutBtn:hover{
+    background-color:  rgb(182, 95, 13);
+    color: white;
+}
+
+.AdminLayout > h3{
+    color: #404145;
+}
+
+.pagadosContainer{
+    max-width: 120vh;
+    width: 100%;
+    min-height: 100px;
+    border: 1px solid #ccc;
+    margin: 20px auto;
+}
+
+.completeOrdersContainer{
+    max-width: 120vh;
+    width: 100%;
+    min-height: 100px;
+    border: 1px solid #ccc;
+    margin: 20px auto;
+}

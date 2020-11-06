@@ -1,0 +1,27 @@
+
+.page{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.enter{
+    opacity: 0;
+    z-index: 1;
+}
+
+.appear-active,
+.enter.enter-active{
+    opacity: 1;
+    transition: opacity 300ms linear 150ms;
+}
+
+.exit{
+    opacity: 1;
+}
+
+.exit.exit-active{
+    opacity: 0;
+    transition: opacity 150ms linear;
+}

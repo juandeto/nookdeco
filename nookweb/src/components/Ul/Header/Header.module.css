@@ -1,0 +1,37 @@
+.Header{
+    height: 10vh;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(64, 65, 69, 0.5);
+    padding: 0 15px;
+}
+
+.Header > a {
+    text-decoration: none;
+}
+
+.Header > a > h3{
+    color: #404145;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    border: 1px solid  #404145;
+    border-radius: 50%;
+    font-family: 'Dancing Script', cursive; 
+
+}
+
+
+.Header > a > h3:hover{
+    color: #7f8291a0;
+    border-color: #7f8291a0;
+    }
+
+@media (max-width: 500px){
+    .LinksContainer{
+    display: none
+}
+
+}

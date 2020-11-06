@@ -1,0 +1,55 @@
+.Auth{
+    margin: 10% auto;
+    height: 50vh;
+    width: 50vh;
+    box-shadow: 0 0px 15px 0px rgba(0,0,0,0.2);
+}
+
+.Auth > h3{
+    text-align: center;
+    padding-top: 20px;
+    margin-block-start: 0em;
+}
+
+.Auth > form  > label{
+    padding: 5px;
+ display: block;
+ margin: auto 10%;
+}
+
+.Auth > form > label > p{
+    font-size: 0.8rem;
+    letter-spacing: 0.11rem;
+    color: #111;
+   
+}
+
+.Auth > form  > label > input{
+    width: calc(100% - 15px);
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 0.9rem;
+    border: 2px solid #ccc;
+}
+
+.Auth > form  > label > input:focus{
+    background-color: beige;
+}
+
+.Auth > form  > button{
+    padding: 10px;
+    font-size: 0.8rem;
+    letter-spacing: 0.11rem;
+    color: #111;
+    border:2px solid #ccc;
+    background-color: white;
+    display: block;
+    margin: 10px auto;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.Auth > form  > button:hover{
+    background-color: beige;
+}

@@ -1,0 +1,45 @@
+.Contacto{
+    margin: 100px 0;
+}
+
+.title{
+    text-align: center;
+    color: #404145;
+    font-size: 1.5rem 0.12rem;
+    display: inline-block;
+    margin: auto;
+}
+
+
+
+.container{
+    width: calc(60vh - 30px);
+    margin: 30px auto;
+    padding: 35px 15px;
+}
+
+.info{
+    margin: 30px auto;
+    display: flex;
+}
+
+.info > span{
+    padding: 5px;
+    letter-spacing: 0.10rem;
+    text-decoration: none;
+    color: #404145;
+}
+
+.LinksContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: beige;
+}
+
+.LinksContainer > p{
+    letter-spacing: 0.10rem;
+    text-decoration: none;
+    color: #404145;
+}

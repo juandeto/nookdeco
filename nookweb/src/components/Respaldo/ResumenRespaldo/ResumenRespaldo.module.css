@@ -1,0 +1,198 @@
+
+.ResumenRespaldo{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.ResumenRespaldo> h2{
+    text-align: center;
+    letter-spacing: 0.11rem;
+    font-size: 1rem;
+    padding: 20px 0;
+    margin-block-start: 0.0em;
+    margin-block-end: 0.83em;
+    letter-spacing: 0.11rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #404145;
+    background-color: beige;
+}
+
+
+.ResumenRespaldo > span{
+    margin: 5px auto;
+    padding: 10px;
+    background-color: rgb(241, 142, 124);
+    letter-spacing: 0.11rem;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: #c90101;
+    text-align: center;
+}
+
+.ResumenRespaldo > span > a{
+    margin: 0 auto;
+    color: #404145;
+    text-decoration: none;
+}
+
+.listaPrincipal{
+    position: relative;
+    text-align: center;
+    list-style: none;
+    padding: 15px 10px;
+    margin: 5px auto;
+    letter-spacing: 0.06rem;
+    font-size: 0.9rem;
+    color: #404145;
+    width: 80%;
+}
+
+.listaPrincipal > li{
+    list-style: none;
+    padding: 15px 0;
+    color: #404145;
+    display: block;
+   
+}
+
+.title{
+    font-size: 1.4rem;
+    color: #404145;
+    text-align: left;
+    border: 0;
+    font-weight: bold;
+    margin-bottom: 18px!important;
+    margin-left: 5px;
+    border-bottom: 1px solid rgba(64, 65, 69, 0.2);
+}
+
+.Caracteristicas{
+    list-style: none;
+    padding: 15px 0;
+    margin: 0 auto;
+    max-width: 100%;
+    text-align: left;
+
+}
+.Caracteristicas > li{
+    list-style: none;
+    padding: 5px 0;
+    margin: 10px 0 ;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.Medidas{
+    list-style: none;
+    padding: 15px 0;
+}
+
+.Medidas > li{
+    list-style: none;
+    padding: 5px 0;
+    margin: 0 0 0 50px;
+}
+
+.precioFinal{
+    color: #404145;
+    text-align: left;
+    padding: 5px;
+    border: 0;
+    font-weight: bold;
+    margin-bottom: 18px!important;
+    margin-left: 5px;
+    border-top: 1px solid rgba(64, 65, 69, 0.2);
+    font-size: 1.3rem;
+}
+
+.Button{
+    margin: 5px auto;
+    background-image:linear-gradient(to right,#A3815B,#C2A37E, #E5C9A4 );
+    background-size: 200% auto;
+    transition: 0.5s;
+    background-color: #E5C9A4;
+    color: white;
+    outline: none;
+    border: 1px #ccc;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: 700;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 6px;
+    width: 80%;
+}
+
+.Button:hover{
+    background-position: right center;
+}
+
+.Disabled{
+    background-image: unset;
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.inputCantidad{
+    width: 60px;
+    text-align: center;
+    outline: none;
+    border: none;
+    padding: 10px 0px;
+    border-radius: 3px;
+    font-family: inherit;
+    font:inherit;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.mathSimbolMinus{
+    padding: 8px 16px;
+}
+
+.mathSimbolPlus{
+    padding: 8px 14px;
+}
+
+.mathSimbolMinus,
+.mathSimbolPlus{
+    margin: 5px 15px ;
+    border: 1px solid #404145;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease-out;
+}
+
+.mathSimbolMinus:hover,
+.mathSimbolPlus:hover{
+    background-color: #404145;
+    color: white;
+}
+
+.croquisContainer{
+max-width: 300px;
+overflow: hidden;
+}
+
+@media (min-width: 500px){
+    .mathSimbolMinus,
+.mathSimbolPlus{
+    margin: 5px 25px ;
+}
+}
+
+@media (min-width: 800px){
+    .listaPrincipal{
+        text-align: center;
+        width: 60%;
+    }
+    .Button{
+        max-width: 30%;
+    }
+
+}

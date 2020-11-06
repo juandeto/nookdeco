@@ -1,0 +1,39 @@
+.Logo{
+    border: solid 1px #fff;
+    padding: 15px;
+    border-radius: 50%;
+    margin: 40px auto;
+    box-shadow:  7px 7px 14px #ebebeb, 
+             -7px -7px 14px #ffffff;
+    z-index: 3;
+    background-color: rgba(255,255,255,0.8);
+    transition: all 0.4s ease;
+}
+
+.Logo:hover{
+    padding: 20px;
+}
+
+.Logo > h1{
+    font-size:3.5rem;
+    font-family: 'Dancing Script', cursive;
+    color: #404145;
+    text-align: center;
+    margin-block-start: 0.30em;
+    margin-block-end: 0.10em;
+}
+
+.Logo > h2{
+    color: #404145;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.10rem;
+    margin-block-end: 1.30em;
+    margin-block-start: 0.10em;
+}
+
+@media (min-width: 800px){
+    .Logo > h2{
+        font-size: 1rem;
+    }
+}

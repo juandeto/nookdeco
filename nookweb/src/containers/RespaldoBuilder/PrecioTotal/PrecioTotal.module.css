@@ -1,0 +1,14 @@
+.precioTotal{
+    margin: 30px auto 10px auto;
+    letter-spacing: 0.11rem;
+    font-size: 0.9rem;
+    color: #404145;
+    text-align: center;
+    display: block;
+    align-self: flex-start;
+}
+
+.precioConForma{
+    margin: 15px auto 5px 10px;
+    text-align: center;
+}

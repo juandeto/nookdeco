@@ -1,0 +1,62 @@
+.NavigationItems{
+    display: none;
+}
+
+@media (min-width: 500px){
+    .NavigationItems{
+        display: contents;
+        display: flex;
+        width: 100%;
+        justify-content: left;
+        align-items: flex-start;
+        list-style: none;
+        margin-block-start: 1em;
+    margin-block-end: 0em;
+    }
+    .item{
+        padding: 10px;
+    }
+    .item > a,
+    .item > .respaldoLink{
+        text-decoration: none;
+        font-size: 0.9rem;
+        letter-spacing: 0.10rem;
+        color: #404145;
+        text-transform: uppercase;
+        position: relative;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+    .submenu{
+        padding-inline-start: 0px;
+        position: absolute;
+        display: flex;
+        width: 100%;
+        top: 8%;
+        left: 0;
+        z-index: 1;
+        background-color: rgba(255,255,255,1);
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s ease-out;
+    }
+    .respaldoLink:hover + .submenu{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .submenu:hover{
+        visibility: visible;
+        opacity: 1;
+    }
+    .submenu > a{
+        font-size: 0.9rem;
+        letter-spacing: 0.10rem;
+        color: #404145;
+        font-weight: 600;
+        text-decoration: none;
+        padding:20px 25px;
+        margin-left: 130px;
+    }
+
+}

@@ -1,0 +1,95 @@
+.Home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    position: relative;
+}
+
+.Home > .respaldoBuilderLink{
+    text-decoration: none;
+    width: 100%;
+    padding: 50px 0;
+    height: fit-content;
+     background-image: 
+        url("./backHome.jpg");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+    position: relative;
+   overflow: hidden;
+}
+
+.Home .container{ 
+    display:flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 40vh;
+}
+
+.Home .container:after{
+    content: '';
+    background-color: rgba(255,255,255,0.0);
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease-out;
+}
+
+.Home .container > h3{
+    font-size: 1.3rem;
+    color: #404145;
+    text-align: center;
+    padding: 15px;
+    border: 0;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-bottom: 18px!important;
+    margin-left: 5px;
+    z-index: 1;
+    background-color: white;
+    border: solid 1px #404145;
+    transition: all 0.4s ease-out;
+}
+
+.container:hover > h3{
+    background-color:#404145;
+    color: white;
+}
+
+
+.dataDePago{
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #404145;
+    border: solid 0.5px #ccc;
+    margin-top: 30px;
+    padding: 5px;
+    box-shadow:  5px 5px 11px #d4d4d4, 
+    -5px -5px 11px #ffffff;
+}
+
+.dataDePago >p{
+    text-align: left;
+    letter-spacing: 0.09rem;
+}
+
+@media (min-width: 500px){
+    .Home{
+        justify-content: flex-start;
+        
+    }
+    .DesktopOnly{
+        width: 100%;
+    }
+    .dataDePago{
+        font-size: 0.9rem;
+
+    }
+}

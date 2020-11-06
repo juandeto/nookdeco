@@ -1,0 +1,48 @@
+.SideDrawer{
+    position: fixed;
+    width: 280px;
+    max-width: 70%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 200;
+    background-color: white;
+    padding: 32px 16px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-out;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.SideDrawer > a{
+    margin: 0 auto;
+    width: 100%;
+    display: block;
+    text-align: left;
+    margin-left: 25px;
+    text-decoration: none;
+    color: #404145;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+}
+
+.SideDrawer > a > h3{
+    margin: 15px 0;
+}
+
+
+
+@media (min-width: 500px){
+    .SideDrawer{
+        display: none;
+    }
+}
+
+.Open{
+    transform: translateX(0);
+}
+
+.Closed{
+    transform: translateX(-100%);
+}

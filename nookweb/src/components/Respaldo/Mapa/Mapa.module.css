@@ -1,0 +1,50 @@
+.Mapa{
+    width: 90%;
+    margin: 30px auto 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.etapa{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid rgba(64, 65, 69, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(64, 65, 69, 0.8);
+    z-index: 2;
+    position: relative;
+    background: white;
+    transition: all 0.3s ease;
+    transform: scale(0.90);
+}
+
+.line{
+    position: absolute;
+    z-index: 0;
+    border: 1px solid rgba(64, 65, 69, 0.3);
+    width: 70%;
+}
+
+.fill{
+    border: 1px solid rgba(64, 65, 69, 0.5);
+    color:rgba(64, 65, 69, 0.7);
+    transform: scale(1.2);
+}
+
+@media (min-width: 500px){
+    .Mapa{
+        width: 80%;
+
+    }
+
+    .line{
+        position: absolute;
+        z-index: 0;
+        border: 1px solid rgba(64, 65, 69, 0.3);
+        width: 68%;
+    }
+}

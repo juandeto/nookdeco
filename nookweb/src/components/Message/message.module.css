@@ -1,0 +1,48 @@
+.Message > p{
+    letter-spacing: 0.11rem;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: #404145;
+    font-weight: 600;
+    text-align: center;
+}
+
+.Message > a {
+    text-decoration: none;
+    cursor: pointer;
+   
+}
+
+.Message > a > button{
+    cursor: pointer;
+    margin: 30px auto;
+    display: block;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 6px;
+    outline: none;
+    box-shadow: 0 0 20px #eee;
+    width: 100%;
+}
+.irAlCarritoBtn{
+    background-color: #06D6A0;
+    border: solid 2px #06D6A0;
+    color: #404145;
+    transition: all 0.3s ease-out;
+}
+.seguirComprandoBtn{
+    background-color: beige;
+    color: #404145;
+    border: solid 0.6px #404145;
+    transition: all 0.3s ease-out;
+}
+
+.irAlCarritoBtn:hover{
+    background-color: #10e6ac;
+}
+
+.seguirComprandoBtn:hover{
+    background-color: rgb(224, 224, 188);
+}

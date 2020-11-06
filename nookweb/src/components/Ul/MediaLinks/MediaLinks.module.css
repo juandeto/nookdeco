@@ -1,0 +1,13 @@
+.MediaLinks{
+    color: #404145;
+    padding: 10px 15px;
+    display: flex
+}
+
+.MediaLinks:hover{
+color: #7f8291a0;
+}
+
+.MediaLinks > a{
+    outline: none;
+}

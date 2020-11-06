@@ -1,0 +1,85 @@
+.Carrito{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+    min-height: 500px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.Carrito > h2{
+    color: rgb(64, 65, 69);
+    align-self: center;
+}
+
+
+.tusProductos{
+    font-size: 1.4rem;
+    color: #404145;
+    text-align: left;
+    border: 0;
+    font-weight: bold;
+    margin-bottom: 5px!important;
+    margin-left: 12px;
+    align-self: flex-start;
+}
+
+.Carrito > p{
+    align-self: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+    max-width: 70%;
+    line-height: 1.2em;
+    color: #515258;
+    text-align: center;
+}
+
+.container{
+    width: 95%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.Carrito > button{
+    display: inline-block;
+    width: 50%;
+    color: white;
+    background-color: #06D6A0;
+    outline: none;
+    border: 1px #ccc;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 700;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 4px;
+    margin: 6px;
+   
+}
+
+.envios{
+    width: 80%;
+    border: dashed 1px #ccc;
+    padding: 5px;
+}
+
+
+
+.disabled{
+    background-color: #ccc;
+}
+
+.totalPrice{
+    display: block;
+    letter-spacing: 0.11rem;
+    font-size: 1.4rem;
+    margin: 10px 0;
+    padding: 10px;
+    font-weight: 700;
+    background-color: beige;
+    color: rgb(64, 65, 69);
+    width: 80%;
+    text-align: center;
+    align-self: center;
+}

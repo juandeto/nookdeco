@@ -1,0 +1,15 @@
+
+.caracteristica{
+    color: rgb(64, 65, 69);
+    font-size: 0.8rem;
+    letter-spacing: 0.09rem;
+}
+
+.closeTag{
+    position: absolute;
+    top: 5%;
+    right: 2%;
+    color: #404145;
+    font-size: 1.3rem;
+    cursor: pointer;
+}

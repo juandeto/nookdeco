@@ -1,0 +1,215 @@
+
+ .NavigationItems {
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-self: flex-start;
+    flex-direction: column;
+    list-style: none;
+    padding-inline-start: 0;
+    min-height: 60vh;
+}
+
+.item{
+    min-height: 25vh;
+    text-align: left;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    border-top: 1px solid rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.orden{
+    order: unset;
+}
+
+.item> a,
+.respaldoLink{
+    padding: 15px 0px 5px 0px;
+    font-weight: 500;
+    margin: 20px 0px 20px 0px;
+    outline: #fff4ec;
+    letter-spacing: 0.10rem;
+    text-decoration: none;
+    color: #404145;
+    transition: all 0.3s ease;
+    transform: scale(0.97);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    width: 100%;
+}
+
+.item> a > span,
+.respaldoLink > span{
+    width: 100%;
+}
+
+
+.item> a,
+.respaldoLink{
+    min-width: 100px;
+}
+
+.submenu{
+    display: flex;
+    justify-content: space-evenly;
+    color: #404145;
+    transition: all 0.4s ease-out;
+    padding-inline-start: 0px;
+    flex-direction: column;
+    width: 100%;
+}
+
+.submenu > a{
+    letter-spacing: 0.10rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: #404145;
+    font-size: 1rem;
+    padding: 40px 20px 40px 10px;
+    font-weight: 600;
+    border-top: 1px solid rgba(0,0,0,0.2);
+    width: calc(100% - 30px);
+}
+
+
+
+.item > ul > a{
+    list-style: none;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #404145;
+    text-align: left;
+    padding: 30px;
+    transition: all 0.2s ease;
+    text-transform: none;
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
+@media (min-width: 500px){
+    .NavigationItems {
+        z-index: 1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-self: flex-start;
+        list-style: none;
+        padding-inline-start: 0;
+        flex-direction: row;
+        min-height: unset;
+    }
+
+    .item{
+        min-height: fit-content;
+        padding: 0px 0px 0px 0;
+        text-align: left;
+        margin: 0;
+        position: static;
+        border-top: unset;
+        width: auto;
+    }
+    
+    .orden{
+        order: 3;
+    }
+    .item> a,
+    .respaldoLink{
+        padding: 15px 15px 5px 10px;
+        font-weight: 500;
+        margin: 20px 15px 0 15px;
+        outline: #fff4ec;
+        letter-spacing: 0.10rem;
+        cursor: pointer;
+        text-decoration: none;
+        color: #404145;
+        transition: all 0.3s ease;
+        transform: scale(0.97);
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        width: auto;
+    }
+    
+
+    
+    .item> a,
+    .respaldoLink{
+        min-width: 100px;
+    }
+    .submenu{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        color: #404145;
+        background-color: rgba(255, 255, 255, 1);
+        transition: all 0.4s ease;
+        transform: none;
+        width: 100%;
+    }
+
+    
+    .submenu > a{
+        list-style: none;
+        letter-spacing: 1px;
+        cursor: pointer;
+        text-decoration: none;
+        color: #404145;
+        text-align: left;
+        padding: 30px;
+        transition: all 0.2s ease;
+        text-transform: none;
+        font-weight: 600;
+        margin-left: 140px;
+    }
+
+    .respaldoLink:hover + .submenu{
+        opacity: 1;
+        visibility: visible;
+        display: flex;
+       flex-direction: row;
+       height: auto;
+       transform: none;
+    }
+    
+    .subMenuOpen{
+        opacity: 1;
+        visibility: visible;
+       display: flex;
+       flex-direction: row;
+       transform: none;
+       margin-top: 5px;
+    }
+
+    .submenu:hover{
+        opacity: 1;
+        visibility: visible;
+
+    }
+    
+    .respaldoLink:hover > .submenu{
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    
+    
+ .btn {
+    margin-left: 50px;
+ }
+
+
+}
