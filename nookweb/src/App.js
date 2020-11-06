@@ -50,7 +50,7 @@ class App extends Component {
     if (this.props.history.location.pathname === "/pagos") {
       notPaying = <Route path="/pagos" component={MensajeTrasPago} />;
     }
-    if (this.props.history.location.pathname === "/pagodiferido") {
+ if (this.props.history.location.pathname === "/pagodiferido") {
       notPaying = <Route path="/pagodiferido" component={MensajePagoFacil} />;
     }
     if (this.props.history.location.pathname === "/pagofallido") {

@@ -7,7 +7,6 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import classes from './MensajeTrasPago.module.css';
 
-
 class SeccionDePago extends Component {
   componentWillUnmount(){
     this.props.onUnmountCarrito()
