@@ -154,7 +154,7 @@ class ContactData extends Component {
       },
       total_amount: order.price + shippingCost,
     };
-    axios.post('https://excited-excited-stealer.glitch.me/mercadopago/create', {
+    axios.post('https://nookserver.herokuapp.com/mercadopago/create', {
       headers: {
         Authorization: 'Access-Control-Allow-Headers", "X-Requested-With, content-type',
       },
