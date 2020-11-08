@@ -2,10 +2,20 @@
   "name": "nookserver",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": "12.11.1"
+    },
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js"
+
+      "dev": "npm start",
+      "start": "serve -s build",
+      "build": "npm run start",
+      "test": "react-scripts test --env=jsdom",
+      "eject": "react-scripts eject",
+      "heroku-postbuild": "npm run build"
   },
+  
   "author": "Tomás Longobardi",
   "license": "ISC",
   "dependencies": {
@@ -16,6 +26,7 @@
     "express": "^4.17.1",
     "mercadopago": "^1.5.0",
     "nodemailer": "^6.4.14",
-    "nodemon": "^2.0.6"
+    "nodemon": "^2.0.6",
+    "serve": "^11.3.2"
   }
 }
