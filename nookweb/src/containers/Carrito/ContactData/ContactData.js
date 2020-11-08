@@ -203,7 +203,7 @@ class ContactData extends Component {
     })
     .then(responseData =>{
     if(this._isMounted && order.formaDePago === 'Transferencia Bancaria'){
-      axios.post('https://nookdeco.com/emails/create', {
+      axios.post('https://nookserver.herokuapp.com/emails/create', {
         "to": `${order.orderData.email}`,
         "subject": "Tu Compra en Nook",
         "html": '<h1 style="text-align: center"><b><i>Nook</i></b></h1><br><h3 style="text-align:center;margin-top:-20px"><b>MARIANA LACROZE</b></h3><br><p>Hola '+order.orderData.nombre+',</p><br><p>¡Muchas gracias por tu compra!</p><p>Por favor, transferinos a nuestra cuenta.<br>CBU: 0720206588000037592754<br>Alias: respaldo.deco.nook <br>No olvides enviarnos el comprobante de transferencia a +54 9 11 55623604</p><br><p><b>Detalle de compra:</b></p><br>'+order.basket+'<p><b>Monto Total</b> = $'+order.price+'</p><br><p>Pronto nos estaremos comunicando con vos al '+order.orderData.telefono+'.</p><br><p>Saludos,</p><p>Equipo Nook</p>'
