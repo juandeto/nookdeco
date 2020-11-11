@@ -10,7 +10,7 @@ require('dotenv').config();
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
-app.use(cors())
+app.use(cors({origin: 'https://nookdeco.com.ar'}))
 app.use(express.static(__dirname + '/public'))
 
 // Index Route
@@ -24,7 +24,7 @@ app.post("/emails/create", emails.create);
 // Mercado Pago Routes
 app.post("/mercadopago/create", mpRoutes.create);
 app.get("/mercadopago/finish", mpRoutes.finish);
-
+    
 const server_port = process.env.PORT || 8080;
 const server_host = '0.0.0.0'
 
