@@ -23,7 +23,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy-production": "react-scripts build && scp -r ./build/* jhony@68.183.106.250:/var/www/nookdeco.com.ar/html"
   },
   "eslintConfig": {
     "extends": "react-app"

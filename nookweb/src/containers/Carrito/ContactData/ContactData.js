@@ -156,7 +156,7 @@ class ContactData extends Component {
     };
     axios.post('https://nookserver.herokuapp.com/mercadopago/create', {
       headers: {
-        Authorization: 'Access-Control-Allow-Headers", "X-Requested-With, content-type',
+        Authorization: 'Access-Control-Allow-Headers, X-Requested-With, content-type',
       },
       data: postData,
       order: order,

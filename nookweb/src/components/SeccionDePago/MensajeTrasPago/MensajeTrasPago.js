@@ -22,9 +22,9 @@ class SeccionDePago extends Component {
                 <Logo />
               </span>
                 <section className={classes.section}>
-                <p className={classes.paragraph}>Te hemos enviado a tu email ({this.props.location.search ? new URLSearchParams(this.props.location.search).get("email") : ""}) los datos de tu compra (caracteristicas, plazos, entrega, etc.).</p>
+                <p className={classes.paragraph}>Te hemos enviado a tu email ({this.props.location.search ? new URLSearchParams(this.props.location.search).get("email") : this.props.datosUsuario.orderData.email}) los datos de tu compra (caracteristicas, plazos, entrega, etc.).</p>
                 {this.props.formaDePago === 'Transferencia Bancaria' ? mensajeTransferencia : null}
-                <p className={classes.paragraph}>Pronto nos estaremos comunicando con vos al {this.props.location.search ? new URLSearchParams(this.props.location.search).get("phone") : ""}. Si tenes alguna duda <Link to="/contacto">no dudes en contactarnos</Link></p>
+                <p className={classes.paragraph}>Pronto nos estaremos comunicando con vos al {this.props.location.search ? new URLSearchParams(this.props.location.search).get("phone") : this.props.datosUsuario.orderData.telefono}. Si tenes alguna duda <Link to="/contacto">no dudes en contactarnos</Link></p>
                 <p className={classes.paragraph}></p>
                 </section>
             </div>
