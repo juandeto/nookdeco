@@ -5,7 +5,11 @@ var nodemailer    = require('nodemailer')
 const transporter = nodemailer.createTransport({
     // Cambiar los datos según mail que se utilizará para el manejo de emails.
     // Yo utilicé este que es para hacer pruebas, generé ese usuario en https://ethereal.email/ y llegan las pruebas allí.
+<<<<<<< HEAD
     host: 'smtp.mail.yahoo.com',
+=======
+    host: 'https://smtp.mail.yahoo.com',
+>>>>>>> a239e38329bbf181df628cb61cecd05428d54f00
     port: 465,
     auth: {
         // Se setean en archivo .env
@@ -57,8 +61,13 @@ exports.finish =  async function (req, res, next) {
     } catch (error) {
       console.log(error);
     }
+<<<<<<< HEAD
     if (req.query.status[0] == 'pending') res.redirect('http://nookdeco.com.ar/pagos?email='+email+'&phone='+phone);
     else res.redirect('http://nookdeco.com.ar/pagos?email='+email+'&phone='+phone);
+=======
+    if (req.query.status[0] == 'pending') res.redirect('https://nookdeco.com.ar/pagos?email='+email+'&phone='+phone);
+    else res.redirect('https://nookdeco.com.ar/pagos?email='+email+'&phone='+phone);
+>>>>>>> a239e38329bbf181df628cb61cecd05428d54f00
     // Cambiar http://localhost:3000/ por dominio real en producción.
     // Deberías cambiar el path de la url pending de /pagos al path que elijas para RapiPago y PagoFacil.
     sendEmail(p.data);
