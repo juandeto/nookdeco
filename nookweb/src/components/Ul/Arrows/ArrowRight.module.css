@@ -12,11 +12,11 @@
    justify-content: center;
    border-radius: 10px;
    padding: 4px;
-   background-color: beige;
+   background-color: #E1E1E1;
 }
 
 .ArrowRight:hover{
-    background-color: beige;
+    background-color: #E1E1E1;
 }
 
 .ArrowRight > span{

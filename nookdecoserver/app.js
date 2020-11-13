@@ -10,16 +10,7 @@ require('dotenv').config();
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
-<<<<<<< HEAD
 app.use(cors());
-=======
-app.use(cors({
-	origin: '*',
-	methods: ['GET', 'POST', 'PATCH'],
-	allowedHeaders: ['Content-Type', 'Authorization'],
-})
-);
->>>>>>> a239e38329bbf181df628cb61cecd05428d54f00
 app.use(function (req, res, next) {
 	res.header("Access-Control-Allow-Origin", "*");
 	res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
@@ -39,11 +30,7 @@ app.post("/emails/create", emails.create);
 // Mercado Pago Routes
 app.post("/mercadopago/create", mpRoutes.create);
 app.get("/mercadopago/finish", mpRoutes.finish);
-<<<<<<< HEAD
-
-=======
     
->>>>>>> a239e38329bbf181df628cb61cecd05428d54f00
 const server_port = process.env.PORT || 8080;
 const server_host = '0.0.0.0'
 

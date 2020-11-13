@@ -10,16 +10,16 @@
     cursor: pointer;
 }
 
-.item:hover{
+/* .item:hover{
     background-color: beige;
-}
+} */
 
 .fill{
-    background-color: beige;
+    background-color: #E1E1E1;
     box-shadow: inset 2px 2px 0px 0px rgba(64,65,69,0.75), inset -2px -2px 0px 0px rgba(64,65,69,0.42);;
     -webkit-box-shadow: inset 2px 2px 0px 0px rgba(64,65,69,0.75), inset -2px -2px 0px 0px rgba(64,65,69,,0.42);
 -moz-box-shadow: inset 2px 2px 0px 0px rgba(64,65,69,0.75), inset -2px -2px 0px 0px rgba(64,65,69,0.42);
-font-weight: bold;background-color: beige;
+font-weight: bold;
     }
 
     .tipo{
