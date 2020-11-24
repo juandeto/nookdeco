@@ -109,21 +109,22 @@ const mapStateToProps = (state) => {
   
   const mapDispatchToProps = (dispatch) => {
     return {
-      onFormaSelected: (tipo, precio) =>
-        dispatch(actions.onFormaSelected(tipo, precio)),
-      onMedidaSelected: (altura, ancho, precio) =>
-        dispatch(actions.onMedidaSelected(altura, ancho, precio)),
-      onGeneroSelected: (tipo, precio) =>
-        dispatch(actions.onGeneroSelected(tipo, precio)),
-      onColorSelected: (color) =>
-        dispatch((actions.onColorSelected(color))),
-      onTachaSelected: (tamanio, precio) =>
-        dispatch(actions.onTachaSelected(tamanio, precio)),
-      onTipoDeTachaSelected: (tipo) =>
-        dispatch(actions.onTipoDeTachaSelected(tipo)),
-      onModeloSelected: (tipo, precio) =>
-        dispatch(actions.onModeloSelected(tipo, precio)),
-      onClickOnTacha: ()=>dispatch(actions.onClickOnTacha())
+      onFormaSelected: (tipo, precio) =>{ window.scroll({ top: 0, behavior: 'smooth' })
+       return dispatch(actions.onFormaSelected(tipo, precio))},
+      onMedidaSelected: (altura, ancho, precio) =>{ window.scroll({ top: 0, behavior: 'smooth' })
+      return dispatch(actions.onMedidaSelected(altura, ancho, precio))},
+      onGeneroSelected: (tipo, precio) => { window.scroll({ top: 0, behavior: 'smooth' })
+        return dispatch(actions.onGeneroSelected(tipo, precio))},
+      onColorSelected: (color) =>  {window.scroll({ top: 0, behavior: 'smooth' })
+       return dispatch((actions.onColorSelected(color)))},
+      onTachaSelected: (tamanio, precio) => {window.scroll({ top: 0, behavior: 'smooth' })
+        return dispatch(actions.onTachaSelected(tamanio, precio))},
+      onTipoDeTachaSelected: (tipo) =>{  
+        return dispatch(actions.onTipoDeTachaSelected(tipo))},
+      onModeloSelected: (tipo, precio) => { window.scroll({ top: 0, behavior: 'smooth' })
+        return dispatch(actions.onModeloSelected(tipo, precio))},
+      onClickOnTacha: ()=> { window.scroll({ top: 0, behavior: 'smooth' }) 
+       return dispatch(actions.onClickOnTacha())}
     };
   };
 

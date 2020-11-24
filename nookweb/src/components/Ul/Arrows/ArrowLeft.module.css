@@ -12,10 +12,10 @@
     align-items: center;
     border-radius: 20px;
     padding: 4px;
-    background-color: beige;
+    background-color: #E1E1E1;
 }
 .ArrowLeft:hover{
-    background-color: beige;
+    background-color: #E1E1E1;
 }
 
 .ArrowLeft > span{

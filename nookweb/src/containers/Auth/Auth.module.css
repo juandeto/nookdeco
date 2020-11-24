@@ -34,7 +34,7 @@
 }
 
 .Auth > form  > label > input:focus{
-    background-color: beige;
+    background-color: #E1E1E1;
 }
 
 .Auth > form  > button{
@@ -51,5 +51,5 @@
 }
 
 .Auth > form  > button:hover{
-    background-color: beige;
+    background-color: #E1E1E1;
 }

@@ -10,12 +10,23 @@ require('dotenv').config();
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+app.use(cors());
+>>>>>>> 8778b44246125d36c538255b975d526b436d01e6
 app.use(function (req, res, next) {
 	res.header("Access-Control-Allow-Origin", "*");
 	res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
 	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization, access-control-allow-origin");
 	next();
 });
+<<<<<<< HEAD
+=======
+=======
+app.use(cors({origin: 'https://nookdeco.com.ar'}))
+>>>>>>> 89a1943b2fecb5d8ebb3d31ec30c4b9b50bb9c1d
+>>>>>>> 8778b44246125d36c538255b975d526b436d01e6
 app.use(express.static(__dirname + '/public'))
 
 // Index Route

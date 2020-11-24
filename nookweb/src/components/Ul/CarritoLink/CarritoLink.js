@@ -6,7 +6,7 @@ import classes from './CarritoLink.module.css';
 import CurrencyFormat from 'react-currency-format';
 
 function Carrito(props) {
-
+    console.log(props)
     let infoCarrito;
     if(props.basket.length >0 ){
      infoCarrito= props.basket.map((item, i)=> {
@@ -51,6 +51,7 @@ function Carrito(props) {
             <span
             onClick={() =>props.showInfo()}
             className={classes.MiCarrito}>
+                {props.basket.length >0 ? <span className={classes.basketLength}>{props.basket.length}</span> : null}
                 {carrito}
                 <p>Mi Carrito</p>
                 </span>
@@ -62,11 +63,11 @@ function Carrito(props) {
                  renderText={(value)=>{
                      return(
                 <p className={classes.totalPrice}>
-                    Total ({props.basket.length} {props.basket.length > 1 ? "productos":"proucto"}): {value}</p>
+                    Total ({props.basket.length} {props.basket.length > 1 ? "productos":"producto"}): {value}</p>
                          )
                  }}
                  decimalScale={2}
-                 value={props.totalPrice} //Homework
+                 value={props.totalPrice} 
                  displayType={"text"}
                  thousandSeparator={true}
                  prefix={"$"}

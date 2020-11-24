@@ -9,7 +9,7 @@
     text-transform: uppercase;
     font-weight:700;
     color: #404145;
-    background-color: beige;
+    background-color: #E1E1E1;
 }
 
 .Medidas > .title > span{
@@ -35,7 +35,7 @@
     align-items: center;
     font-size: 1rem;
     padding: 10px 0;
-    background-color: beige;
+    background-color: #E1E1E1;
 }
 
 .Medidas .precioOpcion{
@@ -58,13 +58,13 @@
     color: #404145;
     cursor: pointer;
 }
-
+/* 
 .Medidas > .container > .item:hover{
     background-color: beige;
-}
+} */
 
 .fill{
-    background-color: beige;
+    background-color: #E1E1E1;
     box-shadow: inset 2px 2px 0px 0px rgba(64,65,69,0.75), inset -2px -2px 0px 0px rgba(64,65,69,0.42);;
     -webkit-box-shadow: inset 2px 2px 0px 0px rgba(64,65,69,0.75), inset -2px -2px 0px 0px rgba(64,65,69,,0.42);
 -moz-box-shadow: inset 2px 2px 0px 0px rgba(64,65,69,0.75), inset -2px -2px 0px 0px rgba(64,65,69,0.42);

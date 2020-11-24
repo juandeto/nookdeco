@@ -6,7 +6,8 @@ const transporter = nodemailer.createTransport({
     // Cambiar los datos según mail que se utilizará para el manejo de emails.
     // Yo utilicé este que es para hacer pruebas, generé ese usuario en https://ethereal.email/ y llegan las pruebas allí.
 
-    host: 'https://smtp.mail.yahoo.com',
+    host: 'smtp.gmail.com',
+    secure: true,
     port: 465,
     auth: {
         // Se setean en archivo .env
@@ -17,6 +18,7 @@ const transporter = nodemailer.createTransport({
 
  
 const sendEmail = (data) => {
+    console.log(data)
   var productos   = "";
   var totalAmount = 0;
   for(var i=0;i<data.items.length;i++){
@@ -29,11 +31,11 @@ const sendEmail = (data) => {
   totalAmount += data.shipments.cost;
   const mailOption = {
       // En from poner mail propio de Nook.
-      from: 'marlacroze@yahoo.com',
+      from: 'marianalacroze61@gmail.com',
       to: data.payer.email,
       subject: 'Gracias por comprar en Nook Deco!',
       text: 'Gracias por comprar en Nook Deco!',
-      html: '<h1 style="text-align: center"><b><i>Nook</i></b></h1><br><h3 style="text-align:center;margin-top:-20px"><b>MARIANA LACROZE</b></h3><br><p>Hola '+data.payer.name+',</p><br><p>¡Muchas gracias por tu compra!</p><br><p><b>Detalle de compra:</b></p><br>'+productos+'<p><b>Monto Total</b> = $'+totalAmount+'</p><br><p>Pronto nos estaremos comunicando con vos al '+data.payer.phone.number+'.</p><br><p>Saludos,</p><p>Equipo Nook</p>',
+      html: '<h1 style="text-align: center"><b><i>Nook</i></b></h1><br><h3 style="text-align:center;margin-top:-20px"><b>MARIANA LACROZE</b></h3><br><p>Hola '+data.payer.name+',</p><br><p>¡Muchas gracias por tu compra!</p><br><p><b>Detalle de compra:</b></p><br>'+data.items[0].title+'<p><b>Monto Total</b> = $'+totalAmount+'</p><br><p>Pronto nos estaremos comunicando con vos al '+data.payer.phone.number+'.</p><br><p>Saludos,</p><p>Equipo Nook</p>',
   };
   transporter.sendMail(mailOption, (error, info) => {
       if (error) return console.log(error)
@@ -115,6 +117,10 @@ exports.create = async function (req, res, next) {
         return res;
     } catch(e) {
         res.end(e.message || e.toString());
+<<<<<<< HEAD
         return next(error)
+=======
+        return next(e)
+>>>>>>> 8778b44246125d36c538255b975d526b436d01e6
     }
 };
