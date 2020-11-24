@@ -164,6 +164,7 @@ class ContactData extends Component {
     .then(response => {
       return  window.location = response.data;
     })
+    .catch((error) => console.log(error));
   }
 
 
@@ -171,6 +172,7 @@ class ContactData extends Component {
  orderHandler = (event) => {
     this.setState({ loading: true });
     event.preventDefault();
+
     const formData = {};
     for (let formElementIdentifier in this.state.orderForm) {
       formData[formElementIdentifier] = this.state.orderForm[
@@ -190,28 +192,23 @@ class ContactData extends Component {
       entregado: false,
       date: time,
     };
-
     this.props.onCreateOrder(order)
     // this.discountHandler(formData.provincia)
 
     axios
     .post("/orders.json", order)
-    .then((response) => {
-      if(this._isMounted){
-        
-      }
-    })
-    .then(responseData =>{
+    .then(response =>{
     if(this._isMounted && order.formaDePago === 'Transferencia Bancaria'){
       axios.post('https://nookserver.herokuapp.com/emails/create', {
         "to": `${order.orderData.email}`,
         "subject": "Tu Compra en Nook",
-        "html": '<h1 style="text-align: center"><b><i>Nook</i></b></h1><br><h3 style="text-align:center;margin-top:-20px"><b>MARIANA LACROZE</b></h3><br><p>Hola '+order.orderData.nombre+',</p><br><p>¡Muchas gracias por tu compra!</p><p>Por favor, transferinos a nuestra cuenta.<br>CBU: 0720206588000037592754<br>Alias: respaldo.deco.nook <br>No olvides enviarnos el comprobante de transferencia a +54 9 11 55623604</p><br><p><b>Detalle de compra:</b></p><br>'+order.basket+'<p><b>Monto Total</b> = $'+order.price+'</p><br><p>Pronto nos estaremos comunicando con vos al '+order.orderData.telefono+'.</p><br><p>Saludos,</p><p>Equipo Nook</p>'
+        "html": '<h3 style="text-align: left"><b><i>Nook</i></b></h1><br><h3 style="text-align:left;margin-top:-20px"><b>MARIANA LACROZE</b></h3><br><p>Hola '+order.orderData.nombre+',</p><p>Por favor, para completar tu compra transferinos a nuestra cuenta.</p><span style="display: block; width: 50vh; margin: 15px 5px;padding: 15px; border: 1px solid #ccc;"><p>CBU: 0720206588000037592754<br>Alias: respaldo.deco.nook </p></span><p style="font-weight: bold; font-size: 1rem; color: tomato">No olvides enviarnos el comprobante de transferencia por whatsapp (+54 9 11 55623604)</p><br><p><b>Detalle de compra:</b></p><span style="border: 1px solid #ccc; padding: 15px; width: 70vh; height: auto; background-color: white; display: block;"><p>Cantidad:'+order.basket[0].cantidad+'</p><p>Forma:'+order.basket[0].forma+'</p><p>Medidas: '+order.basket[0].medida.altura+'m. por '+order.basket[0].medida.altura+'m</p><p>Modelo:'+order.basket[0].modelo+'</p><p>Genero: '+order.basket[0].genero+'</p><p>Color: '+order.basket[0].color+'</p><p>Tacha: '+order.basket[0].tacha+' / '+order.basket[0].tipoTacha+'</p><p>Precio Individual: $'+order.basket[0].precioParticular+'</p></span><p><b>Monto Total (incluyendo descuentos)</b> = $'+order.price+'</p><p>Pronto nos estaremos comunicando con vos al '+order.orderData.telefono+'.</p><br><p>¡Muchas gracias por tu compra!</p><br><p>Saludos,</p><p>Equipo Nook</p>'
 }).then(
   this.setState({ loading: false })
 )
 .then(this.props.history.push("/pagos"))
-    }else{
+    }
+    else{
       return this.mercadoPago(order);
     }
     })
@@ -387,15 +384,16 @@ class ContactData extends Component {
             />
       
           </div>
-          <button className={classes.ModalBtn}onClick={this.orderHandler}>
+          <button className={classes.ModalBtn} onClick={this.orderHandler}>
             Ir a Pagar
           </button>
         </Modal>
+        <Modal show={this.state.loading}>
+        <Spinner />;
+        <p className={classes.CargandoText}>Aguarde un instante...</p>
+        </Modal>
       </form>
     );
-    if (this.state.loading) {
-      form = <Spinner />;
-    }
 
     return <Auxiliary>{form}</Auxiliary>;
   }

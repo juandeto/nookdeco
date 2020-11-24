@@ -181,7 +181,12 @@ color: rgb(92, 92, 92);
 }
 
 
-
+.CargandoText{
+    text-align: center;
+    font-size: 1.1rem;
+    color: #404145;
+    font-weight: 600;
+}
 
 input[name="formaDePago"]{
     display: none;

@@ -84,9 +84,9 @@
     color: #404145;
 }
 
-.tipo:hover{
+/* .tipo:hover{
     background-color: beige;
-}
+} */
 
 .image{
     object-fit: contain;

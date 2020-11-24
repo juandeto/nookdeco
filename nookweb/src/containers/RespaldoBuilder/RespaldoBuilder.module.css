@@ -1,6 +1,8 @@
 .RespaldoBuilder{
     max-height: 90vh;
     min-height: 80vh;
+    
+  scroll-behavior: smooth;
 }
 
 .RespaldoBuilder .control{
@@ -9,7 +11,6 @@
     border-top: 1px solid rgba(64, 65, 69, 0.1);
     position: relative;
     min-height: 50vh;
-    overflow-y: scroll;
 }
 
 
@@ -39,7 +40,7 @@
         grid-template-columns: 40% 1fr;
         grid-template-rows: 1fr auto;
         border-right: 1px solid #ccc;
-        max-height: 90vh;
+        
     }
 
     .RespaldoBuilder .control{
@@ -61,8 +62,7 @@
     .croquisRespaldo{
         grid-column: 2/4;
         grid-row: 1/2;
-        max-height: 90vh;
-        height: 90vh;
+        height: auto;
         position: relative;
     }
 
