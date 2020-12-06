@@ -5,6 +5,7 @@ var nodemailer    = require('nodemailer')
 const transporter = nodemailer.createTransport({
     // Cambiar los datos según mail que se utilizará para el manejo de emails.
     // Yo utilicé este que es para hacer pruebas, generé ese usuario en https://ethereal.email/ y llegan las pruebas allí.
+
     host: 'smtp.gmail.com',
     secure: true,
     port: 465,
@@ -30,7 +31,7 @@ const sendEmail = (data) => {
   totalAmount += data.shipments.cost;
   const mailOption = {
       // En from poner mail propio de Nook.
-      from: 'marlacroze@yahoo.com',
+      from: 'marianalacroze61@gmail.com',
       to: data.payer.email,
       subject: 'Gracias por comprar en Nook Deco!',
       text: 'Gracias por comprar en Nook Deco!',
@@ -116,6 +117,10 @@ exports.create = async function (req, res, next) {
         return res;
     } catch(e) {
         res.end(e.message || e.toString());
+<<<<<<< HEAD
+        return next(error)
+=======
         return next(e)
+>>>>>>> 8778b44246125d36c538255b975d526b436d01e6
     }
 };

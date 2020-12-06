@@ -16,7 +16,11 @@
 .env.development.local
 .env.test.local
 .env.production.local
+<<<<<<< HEAD
+packagelock.json
+=======
 functions
+>>>>>>> 8778b44246125d36c538255b975d526b436d01e6
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
