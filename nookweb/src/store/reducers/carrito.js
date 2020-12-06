@@ -7,7 +7,7 @@ const initialState ={
     totalPrice: 0,
     loading: false,
     order:[],
-    formaDePago: null,
+    formaDePago: '',
     formaDeEnvio: null,
     envioAlInterior: false
 }

@@ -365,3 +365,15 @@ input[name="formaDePago"]:checked + .selectorPago:after{
 .ModalBtn:hover{
     background: #646569;
 }
+
+.MensajeDeFormaDePago{
+    color: #404145;
+    padding: 10px;
+    font-size: 1rem;
+    letter-spacing: 0.12rem;
+    border-radius: 6px;
+    /* border: 1px solid #404145; */
+    margin: 15px 0;
+    box-shadow:  -7px 7px 17px #adadad, 
+             7px -7px 17px #ffffff;
+}

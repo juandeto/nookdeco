@@ -33,7 +33,7 @@ function RoutesHandler(props) {
       pathname={pathname}
       goToLeft={props.toggleLeft}/>
       </div>
-      <Mapa routes={routes} index={props.index} />
+      <Mapa keys={props.keys} selectRoute={props.selectRoute} routes={routes} index={props.index} />
     </div>
   );
 }

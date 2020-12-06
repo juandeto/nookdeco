@@ -7,18 +7,22 @@
     position: relative;
 }
 
-.Home > .respaldoBuilderLink{
+.respaldoBuilderLink{
     text-decoration: none;
     width: 100%;
-    padding: 50px 0;
+    padding: 0;
     height: fit-content;
      background-image: 
-        url("./backHome.jpg");
+        url("./respaldoPic.jpg");
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
     position: relative;
    overflow: hidden;
+   background-color: #e9e9e3;
+   /* border-bottom: 1px solid #404145;
+    border-top: 1px solid #404145; */
+    margin-top: 0px;
 }
 
 .Home .container{ 
@@ -27,7 +31,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 40vh;
+    height:50vh;
 }
 
 .Home .container:after{
@@ -84,6 +88,9 @@
     .Home{
         justify-content: flex-start;
         
+    }
+    .respaldoBuilderLink{
+        margin-top: 30px;
     }
     .DesktopOnly{
         width: 100%;

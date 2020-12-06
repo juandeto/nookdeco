@@ -2,13 +2,12 @@
 .containerRespaldo{
       padding: 10px;
     margin: 10px 0 0 0;
-    perspective: 500px;
+    height: 45vh;
 }
 
 .conMedidas{
     display: grid;
     grid-template-columns: 15% 1fr;
-    grid-template-rows:  auto auto auto;
     margin: 40px 0 15px 0;
 }
 
@@ -74,6 +73,7 @@
 .containerRespaldo{
     padding: 10px;
   margin: 10px 0 20px 0;
+  height: 60vh;
 }
 
     .altura, .ancho{

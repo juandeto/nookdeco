@@ -6,7 +6,6 @@ import classes from './CarritoLink.module.css';
 import CurrencyFormat from 'react-currency-format';
 
 function Carrito(props) {
-    console.log(props)
     let infoCarrito;
     if(props.basket.length >0 ){
      infoCarrito= props.basket.map((item, i)=> {

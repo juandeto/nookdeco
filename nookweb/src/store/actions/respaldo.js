@@ -32,11 +32,10 @@ export const onColorSelected = (color) =>{
     }
 }
 
-export const onTachaSelected = (tamanio, precio) =>{
+export const onTachaSelected = (tacha) =>{
     return{ 
         type: actionTypes.SET_TACHA, 
-        tamanio: tamanio, 
-        precio: precio 
+        tacha: tacha
     }
 }
 

@@ -43,6 +43,18 @@
     text-align: center;
     align-self: center;
     padding: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #404145;
+    background-color: #E1E1E1;
+    border: none;
+    font-size: 1rem;
+}
+.verEjemplo >span{
+    padding: 9px;
+    background-color: #ccc;
+    font-size: 0.8rem;
+    border-radius: 5px;
 }
 
 .verEjemplo:hover{

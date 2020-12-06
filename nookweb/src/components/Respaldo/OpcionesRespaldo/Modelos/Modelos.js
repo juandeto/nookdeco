@@ -18,18 +18,21 @@ const Modelos = (props) => {
         onClick={()=>props.selectModelo(modelo.tipo, modelo.precio)}
         key={modelo.tipo}>
             <span className={classes.tipo}>{modelo.tipo}</span>
-            <span 
-            onClick={modalHandler}
-            className={classes.verEjemplo}>Ver Foto</span>
+           
         <span className={classes.precio}>${modelo.precio}</span>
         </div>
     ))
     return ( 
         <div className={classes.Modelos+ ' page'}>
-            <h2>Elija el modelo</h2>
+            <h2>Elija el modelo</h2> 
+            <div
+            className={classes.verEjemplo}>
+            <span 
+            onClick={modalHandler}
+            >¡Mira Fotos de los Modelos!</span>
+            </div>
             <div className={classes.guideline}>
                 <span>Modelo</span>
-                <span className={classes.guidelineEjemplo}>Ver Foto</span>
                 <span>Precio</span>
             </div>
             <div className={classes.modeloOptions}>

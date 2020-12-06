@@ -6,6 +6,8 @@
     justify-content: space-around;
 }
 
+
+
 .etapa{
     width: 20px;
     height: 20px;
@@ -20,6 +22,7 @@
     background: white;
     transition: all 0.3s ease;
     transform: scale(0.90);
+    cursor: pointer;
 }
 
 .line{

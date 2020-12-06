@@ -14,17 +14,18 @@ const TipoDeTacha = (props) => {
     }
     return (
              <li  
-            onClick={()=>props.selectTipoDeTacha(props.modelo)}
+            onClick={()=>props.selectTacha(props.modelo)}
             
-            className={props.tipoDeTacha === props.modelo ? arrayClasses2.join(' '): arrayClasses2[0]}
+            className={props.selectedTacha === props.modelo ? arrayClasses2.join(' '): arrayClasses2[0]}
             ><p>{props.modelo}</p>
-            <p>Diametro {props.selectedTacha === 'Tachas Medianas' ? "15mm" : "19mm"}</p>
-            
-              <img
+            {
+               props.modelo === "Sin tachas" ? null : 
+               <img
               className="image"
               alt="img"
               src={fotos[props.modelo]}
               />
+            }        
               </li>
     )
 }

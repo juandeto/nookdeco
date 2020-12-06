@@ -67,12 +67,9 @@ const OpcionesRespaldo =(props)=> {
             <Route path={props.baseUrl + "/tachas"}>
               <Tachas
                 modelo={props.respaldo.modelo}
-                displayOptions={props.displayOptions}
                 tachas={props.opciones.tachas}
                 selectedTacha={props.respaldo.tacha}
-                selectTacha={tachaSelect}
-                selectTipoDeTacha={tipoDeTachaSelect}
-                tipoDeTacha={props.respaldo.tipoTacha}
+                selectTacha={props.onTachaSelected}
                 
               />
             </Route>
@@ -117,10 +114,10 @@ const mapStateToProps = (state) => {
         return dispatch(actions.onGeneroSelected(tipo, precio))},
       onColorSelected: (color) =>  {window.scroll({ top: 0, behavior: 'smooth' })
        return dispatch((actions.onColorSelected(color)))},
-      onTachaSelected: (tamanio, precio) => {window.scroll({ top: 0, behavior: 'smooth' })
-        return dispatch(actions.onTachaSelected(tamanio, precio))},
-      onTipoDeTachaSelected: (tipo) =>{  
-        return dispatch(actions.onTipoDeTachaSelected(tipo))},
+      onTachaSelected: (tacha) => { window.scroll({ top: 0, behavior: 'smooth' }) 
+        return dispatch(actions.onTachaSelected(tacha))},
+      // onTipoDeTachaSelected: (tipo) =>{ 
+      //   return dispatch(actions.onTipoDeTachaSelected(tipo))},
       onModeloSelected: (tipo, precio) => { window.scroll({ top: 0, behavior: 'smooth' })
         return dispatch(actions.onModeloSelected(tipo, precio))},
       onClickOnTacha: ()=> { window.scroll({ top: 0, behavior: 'smooth' }) 

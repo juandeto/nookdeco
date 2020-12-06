@@ -15,7 +15,6 @@ const initialState = {
     genero: "no seleccionado",
     color: "no seleccionado",
     tacha: "no seleccionado",
-    tipoTacha: "",
     modelo: "no seleccionado",
     cantidad: 1,
     precioParticular: 0,
@@ -26,19 +25,19 @@ const initialState = {
 const formas = [
   {
     tipo: "Rectangular",
-    precio: 0,
+    precio: 300,
   },
   {
     tipo: "Capilla",
-    precio: 1200,
+    precio: 1000,
   },
   {
     tipo: "Oval",
-    precio: 1200,
+    precio: 1000,
   },
   {
     tipo: "Esquinas Redondas",
-    precio: 1200,
+    precio: 1000,
   },
 ];
 
@@ -47,22 +46,22 @@ const medidas = [
   {
     altura: 1.20,
     ancho: 1.0,
-    precio: 12000,
+    precio: 10000,
   },
   {
     altura: 1.20,
     ancho: 1.4,
-    precio: 12800,
+    precio: 10640,
   },
   {
     altura: 1.20,
     ancho: 1.6,
-    precio: 14000,
+    precio: 11800,
   },
   {
     altura: 1.20,
     ancho: 1.8,
-    precio: 15500,
+    precio: 13000,
   },
   {
     altura: 1.20,
@@ -71,85 +70,73 @@ const medidas = [
   },
   {
     altura: 1.20,
+    ancho: 2.10,
+    precio: 15000
+  },
+  {
+    altura: 1.20,
     ancho: 2.2,
-    precio: 18000,
+    precio: 16400,
   },
 ];
 
-const tachas = [
-  {
-    tamanio: "Sin tachas",
-    precio: 0,
-    tipo: [],
-  },
-  {
-    tamanio: "Tachas Medianas",
-    precio: 600,
-    tipo: ["Óxido", "Peltre", "Plateada"],
-  },
-  {
-    tamanio: "Tachas Grandes",
-    precio: 800,
-    tipo: ["Óxido", "Peltre", "Plateada"],
-  },
-];
 
 const modelos = [
   {
     tipo: "Liso",
-    precio: 0,
+    precio: 300,
   },
   {
     tipo: "Tacha Grande Separada",
-    precio: 1200,
+    precio: 1000,
   },
   {
     tipo: "Tacha Perimetral",
-    precio: 1440,
+    precio: 1500,
   },
   {
     tipo: "Doble Tacha",
-    precio: 2400,
+    precio: 2000,
   },
   {
     tipo: "Super Doble Tacha Junta",
-    precio: 3600,
+    precio: 2500,
   },
   {
     tipo: "Tacha Junta Interna",
-    precio: 1440,
+    precio: 1500,
   },
   {
     tipo: "Botoné",
-    precio: 1800,
+    precio: 1500,
   },
   {
     tipo: "Capitone",
-    precio: 10200,
+    precio: 8500,
   },
   {
     tipo: "Capitone y Doble Tacha",
-    precio: 12600,
+    precio: 12000,
   },
   {
     tipo: "Canelon Gordo",
-    precio: 10200,
+    precio: 8500,
   },
   {
     tipo: "Canelon Angosto",
-    precio: 11400,
+    precio: 9500,
   },
   {
     tipo: "Canelon Horizontal",
-    precio: 10200,
+    precio: 8500,
   },
   {
     tipo: "Con Funda Lisa",
-    precio: 5400,
+    precio: 6000,
   },
   {
     tipo: "Con Funda Rayada",
-    precio: 6600,
+    precio: 7000,
   },
   {
     tipo: "Con Marco en Paraiso Macizo",
@@ -157,7 +144,7 @@ const modelos = [
   },
   {
     tipo: "Con Marco en Paraiso Macizo y Botones",
-    precio: 13800,
+    precio: 13500,
   },
 ];
 
@@ -192,20 +179,19 @@ const setColor = (state, color) => {
   const updatedState = { respaldo: updatedRespaldo };
   return updateObject(state, updatedState);
 };
-const setTacha = (state, tamanio, precio) => {
+const setTacha = (state, tacha, precio) => {
   const updatedRespaldo = updateObject(state.respaldo, {
-    tacha: tamanio,
-    precioParticular: setPrice(state, state.respaldo.tacha, tachas, precio),
+    tacha: tacha
   });
   const updatedState = { respaldo: updatedRespaldo };
   return updateObject(state, updatedState);
 };
 
-const setTipoDeTacha = (state, tipo) => {
-  const updatedRespaldo = updateObject(state.respaldo, { tipoTacha: tipo });
-  const updatedState = { respaldo: updatedRespaldo };
-  return updateObject(state, updatedState);
-};
+// const setTipoDeTacha = (state, tipo) => {
+//   const updatedRespaldo = updateObject(state.respaldo, { tipoTacha: tipo });
+//   const updatedState = { respaldo: updatedRespaldo };
+//   return updateObject(state, updatedState);
+// };
 
 const setModelo = (state, tipo, precio) => {
   const modeloConTacha =/Tacha/g;
@@ -240,9 +226,9 @@ const reducer = (state = initialState, action) => {
     case actionTypes.SET_COLOR:
       return setColor(state, action.color);
     case actionTypes.SET_TACHA:
-      return setTacha(state, action.tamanio, action.precio);
-    case actionTypes.SET_TIPO_TACHA:
-      return setTipoDeTacha(state, action.tipo);
+      return setTacha(state, action.tacha);
+    // case actionTypes.SET_TIPO_TACHA:
+    //   return setTipoDeTacha(state, action.tipo);
     case actionTypes.SET_MODELO:
       return setModelo(state, action.tipo, action.precio);
     case actionTypes.DISPLAY_TACHA_OPTIONS:

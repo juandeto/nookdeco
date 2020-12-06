@@ -83,14 +83,14 @@ class ResumenRespaldo extends Component {
                 Medidas:
                 <ul className={classes.Medidas} >
                   <li>
-                    altura:{" "}
+                    Altura:{" "}
                     {this.props.caracteristicas?.medida.altura
                       ? this.props.caracteristicas?.medida.altura.toFixed(2)
                       : "0"}{" "}
                     m.
                   </li>
                   <li>
-                    ancho:{" "}
+                    Ancho:{" "}
                     {this.props.caracteristicas?.medida.ancho
                       ? this.props.caracteristicas?.medida.ancho.toFixed(2)
                       : "0"}{" "}
@@ -101,8 +101,7 @@ class ResumenRespaldo extends Component {
               <li style={{color: this.props.caracteristicas.genero === 'no seleccionado' ? 'red' : 'none'}}>Genero: {this.props.caracteristicas.genero}</li>
               <li style={{color: this.props.caracteristicas.color === 'no seleccionado' ? 'red' : 'none'}}>Color: {this.props.caracteristicas.color}</li>
               <li style={{color: this.props.caracteristicas.tacha === 'no seleccionado' ? 'red' : 'none'}}>
-                Tachas: {this.props.caracteristicas.tacha}{this.props.caracteristicas.tipoTacha === '' ? '': ' de '}
-                {this.props.caracteristicas.tipoTacha}
+                Tachas: Modelo {this.props.caracteristicas.tacha}
               </li>
 
 

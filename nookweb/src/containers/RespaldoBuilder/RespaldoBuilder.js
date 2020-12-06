@@ -16,51 +16,56 @@ class RespaldoBuilder extends Component {
       formas:[
         {
           tipo: "Rectangular",
-          precio: 0
+          precio: 300
         },
         {
           tipo: "Capilla",
-          precio: 1200
+          precio: 1000
         },
         {
           tipo: "Oval",
-          precio: 1200
+          precio: 1000
         },
         {
           tipo: "Esquinas Redondas",
-          precio: 1200
+          precio: 1000
         },
       ],
       medidas:[
         {
           altura: 1.20,
           ancho: 1.00,
-          precio: 12000
+          precio: 10000
         },
         {
           altura: 1.20,
           ancho: 1.40,
-          precio: 12800
+          precio: 10640
         },
         {
           altura: 1.20,
           ancho: 1.60,
-          precio: 14000
+          precio: 11800
         },
         {
           altura: 1.20,
           ancho: 1.80,
-          precio: 15500
+          precio: 13000
         },
         {
           altura: 1.20,
           ancho: 2.00,
-          precio: 16500
+          precio: 14000
+        },
+        {
+          altura: 1.20,
+          ancho: 2.10,
+          precio: 15000
         },
         {
           altura: 1.20,
           ancho: 2.20,
-          precio: 18000
+          precio: 16400
         },
       ],
       generos:[
@@ -93,79 +98,63 @@ class RespaldoBuilder extends Component {
           color:['Blanco 1', 'Natural 4', 'Marron 5', 'Beige 3', 'Gris 9', 'Negro 11', 'Beige 7']
         },
       ],
-      tachas:[
-        {
-          tamanio: 'Sin tachas',
-          precio: 0,
-          tipo:[]
-        },
-        {
-          tamanio: 'Tachas Medianas',
-          precio: 600,
-          tipo:['Óxido', 'Peltre', 'Cromada']
-        },
-        {
-          tamanio: 'Tachas Grandes',
-          precio: 800,
-          tipo:['Óxido', 'Peltre', 'Cromada']
-        },
-      ],
+      tachas:['Sin tachas', 'Óxido', 'Peltre', 'Cromada'],
       modelos:[
         {
           tipo:'Liso',
-          precio: 0
+          precio: 300
         },
         {
           tipo:'Tacha Grande Separada',
-          precio: 1200
+          precio: 1000
         },
         {
           tipo:'Tacha Perimetral',
-          precio:1440
+          precio:1500
         },
         {
           tipo:'Doble Tacha',
-          precio: 2400
+          precio: 2000
         },
         {
           tipo:'Super Doble Tacha Junta',
-          precio: 3600
+          precio: 2500
         },
         {
           tipo:'Tacha Junta Interna',
-          precio: 1440
+          precio: 1500
         },
          {
           tipo:'Botoné',
-          precio: 1800
+          precio: 1500
         },
         {
           tipo:"Capitone",
-          precio: 10200
+          precio: 8500
         },
         {
           tipo:"Capitone y Doble Tacha",
-          precio: 12600
+          precio: 12000
         },
         {
           tipo:'Canelon Gordo',
-          precio: 10200
+          precio: 8500
         },
         {
           tipo:'Canelon Angosto',
-          precio: 11400
+          precio: 9500
         },
         {
           tipo:'Canelon Horizontal',
-          precio: 10200
+          precio: 8500
         },
         {
           tipo: "Con Funda Lisa",
-          precio: 5400,
+          precio: 6000,
         },
         {
           tipo: "Con Funda Rayada",
-          precio: 6600,
+          precio: 7000,
         },
         {
           tipo:'Con Marco en Paraiso Macizo',
@@ -174,7 +163,7 @@ class RespaldoBuilder extends Component {
         ,
         {
           tipo:'Con Marco en Paraiso Macizo y Botones',
-          precio: 13800
+          precio: 13500
         }
       ]
     }
@@ -237,8 +226,13 @@ class RespaldoBuilder extends Component {
       selectForma(index);
     }
 
+    const selectRoute = (location) => {
+      let index = keys.indexOf(location) - 1;
+      selectForma(index)
+    }
+
     const selectForma = (index) =>{
-      if(keys[index + 1] ===  "/medidas" && this.props.respaldo.forma === 'no seleccionado'){
+      if(this.props.respaldo.forma === 'no seleccionado'){
         return alert('debe elegir una forma antes de proseguir')
       }else{
         this.setState({ index: index + 1 });
@@ -261,7 +255,9 @@ class RespaldoBuilder extends Component {
           <RoutesHandler
        index={this.state.index}
        toggleLeft={toggleRoutesHandlerLeft}
-       toggleRight={toggleRoutesHandlerRight}/>
+       toggleRight={toggleRoutesHandlerRight}
+        selectRoute={selectRoute}
+        keys={keys}/>
         </div>
 
       {/* Seccion de opciones */}
@@ -269,6 +265,7 @@ class RespaldoBuilder extends Component {
           
          <OpcionesRespaldo 
           pathname={pathname}
+          keys={keys}
           baseUrl={baseUrl}
          opciones={this.state.opciones}/>
          

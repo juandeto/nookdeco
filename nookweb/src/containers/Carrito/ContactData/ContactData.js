@@ -112,8 +112,9 @@ class ContactData extends Component {
   };
 
   shouldComponentUpdate(nextProps, nextState){
-    if(this.props.formaDePago !== nextProps.formaDePago
-      || this.props.formaDeEnvio !== nextProps.formaDeEnvio
+    if(
+      this.props.formaDePago !== nextProps.formaDePago|| 
+      this.props.formaDeEnvio !== nextProps.formaDeEnvio
       || this.state !== nextState){
       return true
     }else{
@@ -202,7 +203,7 @@ class ContactData extends Component {
       axios.post('https://nookserver.herokuapp.com/emails/create', {
         "to": `${order.orderData.email}`,
         "subject": "Tu Compra en Nook",
-        "html": '<h3 style="text-align: left"><b><i>Nook</i></b></h1><br><h3 style="text-align:left;margin-top:-20px"><b>MARIANA LACROZE</b></h3><br><p>Hola '+order.orderData.nombre+',</p><p>Por favor, para completar tu compra transferinos a nuestra cuenta.</p><span style="display: block; width: 50vh; margin: 15px 5px;padding: 15px; border: 1px solid #ccc;"><p>CBU: 0720206588000037592754<br>Alias: respaldo.deco.nook </p></span><p style="font-weight: bold; font-size: 1rem; color: tomato">No olvides enviarnos el comprobante de transferencia por whatsapp (+54 9 11 55623604)</p><br><p><b>Detalle de compra:</b></p><span style="border: 1px solid #ccc; padding: 15px; width: 70vh; height: auto; background-color: white; display: block;"><p>Cantidad:'+order.basket[0].cantidad+'</p><p>Forma:'+order.basket[0].forma+'</p><p>Medidas: '+order.basket[0].medida.altura+'m. por '+order.basket[0].medida.altura+'m</p><p>Modelo:'+order.basket[0].modelo+'</p><p>Genero: '+order.basket[0].genero+'</p><p>Color: '+order.basket[0].color+'</p><p>Tacha: '+order.basket[0].tacha+' / '+order.basket[0].tipoTacha+'</p><p>Precio Individual: $'+order.basket[0].precioParticular+'</p></span><p><b>Monto Total (incluyendo descuentos)</b> = $'+order.price+'</p><p>Pronto nos estaremos comunicando con vos al '+order.orderData.telefono+'.</p><br><p>¡Muchas gracias por tu compra!</p><br><p>Saludos,</p><p>Equipo Nook</p>'
+        "html": '<h3 style="text-align: left"><b><i>Nook</i></b></h1><br><h3 style="text-align:left;margin-top:-20px"><b>MARIANA LACROZE</b></h3><br><p>Hola '+order.orderData.nombre+',</p><br><p><b>Detalle de compra:</b></p><span style="border: 1px solid #ccc; padding: 15px; width: 70vh; height: auto; background-color: white; display: block;"><p>Cantidad:'+order.basket[0].cantidad+'</p><p>Forma:'+order.basket[0].forma+'</p><p>Medidas: '+order.basket[0].medida.altura+'m. por '+order.basket[0].medida.altura+'m</p><p>Modelo:'+order.basket[0].modelo+'</p><p>Genero: '+order.basket[0].genero+'</p><p>Color: '+order.basket[0].color+'</p><p>Tacha: '+order.basket[0].tacha+'</p><p>Precio Individual: $'+order.basket[0].precioParticular+'</p></span><p><b>Monto Total (incluyendo descuentos)</b> = $'+order.price+'</p><p>Pronto nos estaremos comunicando con vos al '+order.orderData.telefono+'.</p><br><p>¡Muchas gracias por tu compra!</p><br><p>Saludos,</p><p>Equipo Nook</p>'
 }).then(
   this.setState({ loading: false })
 )
@@ -332,7 +333,14 @@ class ContactData extends Component {
            
           
         })}
-
+        {/* <div className={classes.MensajeDeFormaDePago}>
+            <p>Los pagos se realizan mediante transferencia bancaria.</p>
+            <p>Por otras opciones comunicarse al  <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{textDecoration: "none"}}
+                        href="https://api.whatsapp.com/send?phone=+5491155623604o&text=%20">+54 911 5562 3604</a></p>
+        </div> */}
         <CardOptionsPagos formaDePago={this.props.formaDePago} formaDePagoSelected={this.pagoHandler} />
         {this.props.formaDePago === "Transferencia Bancaria" ? 
         <p className={classes.discountMessage}>Se le aplicó un 20% de descuento.</p> : null}

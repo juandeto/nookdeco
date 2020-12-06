@@ -57,7 +57,13 @@
     background-color: beige;
 } */
 
-
+.SinTachas{
+    text-align: center;
+    letter-spacing: 0.11rem;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    color: #404145;
+}
 
 .arrow{
     color: gray;
