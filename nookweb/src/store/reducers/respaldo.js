@@ -25,19 +25,19 @@ const initialState = {
 const formas = [
   {
     tipo: "Rectangular",
-    precio: 300,
+    precio: 400,
   },
   {
     tipo: "Capilla",
-    precio: 1000,
+    precio: 1300,
   },
   {
     tipo: "Oval",
-    precio: 1000,
+    precio: 1300,
   },
   {
     tipo: "Esquinas Redondas",
-    precio: 1000,
+    precio: 1300,
   },
 ];
 
@@ -46,37 +46,37 @@ const medidas = [
   {
     altura: 1.20,
     ancho: 1.0,
-    precio: 10000,
-  },
-  {
-    altura: 1.20,
-    ancho: 1.4,
-    precio: 10640,
-  },
-  {
-    altura: 1.20,
-    ancho: 1.6,
-    precio: 11800,
-  },
-  {
-    altura: 1.20,
-    ancho: 1.8,
     precio: 13000,
   },
   {
     altura: 1.20,
+    ancho: 1.4,
+    precio: 13832,
+  },
+  {
+    altura: 1.20,
+    ancho: 1.6,
+    precio: 15340,
+  },
+  {
+    altura: 1.20,
+    ancho: 1.8,
+    precio: 16900,
+  },
+  {
+    altura: 1.20,
     ancho: 2.0,
-    precio: 16500,
+    precio: 21450,
   },
   {
     altura: 1.20,
     ancho: 2.10,
-    precio: 15000
+    precio: 19500
   },
   {
     altura: 1.20,
     ancho: 2.2,
-    precio: 16400,
+    precio: 21320,
   },
 ];
 
@@ -84,67 +84,67 @@ const medidas = [
 const modelos = [
   {
     tipo: "Liso",
-    precio: 300,
+    precio: 400,
   },
   {
     tipo: "Tacha Grande Separada",
-    precio: 1000,
+    precio: 1300,
   },
   {
     tipo: "Tacha Perimetral",
-    precio: 1500,
+    precio: 1950,
   },
   {
     tipo: "Doble Tacha",
-    precio: 2000,
+    precio: 2600,
   },
   {
     tipo: "Super Doble Tacha Junta",
-    precio: 2500,
+    precio: 3250,
   },
   {
     tipo: "Tacha Junta Interna",
-    precio: 1500,
+    precio: 1950,
   },
   {
     tipo: "Botoné",
-    precio: 1500,
+    precio: 1950,
   },
   {
     tipo: "Capitone",
-    precio: 8500,
+    precio: 11050,
   },
   {
     tipo: "Capitone y Doble Tacha",
-    precio: 12000,
+    precio: 15600,
   },
   {
     tipo: "Canelon Gordo",
-    precio: 8500,
+    precio: 11050,
   },
   {
     tipo: "Canelon Angosto",
-    precio: 9500,
+    precio: 12350,
   },
   {
     tipo: "Canelon Horizontal",
-    precio: 8500,
+    precio: 11050,
   },
   {
     tipo: "Con Funda Lisa",
-    precio: 6000,
+    precio: 7800,
   },
   {
     tipo: "Con Funda Rayada",
-    precio: 7000,
+    precio: 9100,
   },
   {
     tipo: "Con Marco en Paraiso Macizo",
-    precio: 12000,
+    precio: 15600,
   },
   {
     tipo: "Con Marco en Paraiso Macizo y Botones",
-    precio: 13500,
+    precio: 17550,
   },
 ];
 

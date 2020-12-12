@@ -18,7 +18,6 @@ const transporter = nodemailer.createTransport({
 
  
 const sendEmail = (data) => {
-    console.log(data)
   var productos   = "";
   var totalAmount = 0;
   for(var i=0;i<data.items.length;i++){
@@ -117,10 +116,6 @@ exports.create = async function (req, res, next) {
         return res;
     } catch(e) {
         res.end(e.message || e.toString());
-<<<<<<< HEAD
-        return next(error)
-=======
         return next(e)
->>>>>>> 8778b44246125d36c538255b975d526b436d01e6
     }
 };

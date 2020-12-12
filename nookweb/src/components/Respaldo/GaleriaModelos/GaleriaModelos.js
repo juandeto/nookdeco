@@ -12,7 +12,7 @@ const GaleriaModelos = () => {
         <div className={classes.GaleriaModelos}>
             <h1 className={classes.title}>Nuestros Modelos</h1>
             <p>Para ver fotos de los modelos visita nuestras redes sociales.</p>
-            <span className={classes.shakeVertical}>{pointer}</span>
+            <span className={classes.shakeVerticalInicio}>{pointer}</span>
             <MediaLinks />
         </div>
     )

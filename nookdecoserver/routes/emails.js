@@ -14,7 +14,6 @@ const transporter = nodemailer.createTransport({
 });
 
         
-console.log(process.env.USER, process.env.PASSWORD)
 const sendEmail = (to, subject, html) => {
     const mailOption = {
         // En from poner mail propio de Nook.

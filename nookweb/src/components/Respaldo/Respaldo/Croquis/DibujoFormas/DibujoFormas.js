@@ -11,6 +11,11 @@ function DibujoFormas(props) {
     if(props.respaldo.forma !== 'no seleccionado'){
         classesForma.push(classes.modeloSelected)
     }
+    let pointer=(
+      <svg width="35" height="35" viewBox="0 0 74 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M72 3L38.4035 30.3885C36.5443 31.9041 33.8708 31.8859 32.0324 30.3451L2 5.17391" stroke="#06D6A0" strokeWidth="6"/>
+      </svg>
+  )
 
   switch (props.respaldo.forma) {
     case "Rectangular":
@@ -67,7 +72,10 @@ case "Esquinas Redondas":
                 );
                 break;
     default:
-        forma =<p className={classes.mensajeInicio}>Arma tu respaldo en pasos. <br /> Selecciona una forma para comenzar.</p>
+        forma =(<div  className={classes.mensajeInicio}>
+          <p className={classes.mensaje}>Arma tu respaldo en pasos. <br /> Selecciona una forma para comenzar.</p>
+          <span className={classes.shake}>{pointer}</span>
+          </div>)
       break;
   }
     return (

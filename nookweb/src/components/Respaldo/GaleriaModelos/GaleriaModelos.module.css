@@ -23,13 +23,13 @@
     text-align: center;
 }
 
-.shakeVertical {
+.shakeVerticalInicio {
     width: 30px;
-    -webkit-animation: shake-vertical 6s ease-in-out both infinite;
-    animation: shake-vertical 3s ease-in-out both infinite;
+    -webkit-animation: shake-verticalInicio 6s ease-in-out both infinite;
+    animation: shake-verticalInicio 3s ease-in-out both infinite;
 }
 
-@-webkit-keyframes shake-vertical {
+@-webkit-keyframes shake-verticalInicio {
     0%,
     100% {
       -webkit-transform: translateY(0);
@@ -50,7 +50,7 @@
     }
 
   }
-  @keyframes shake-vertical {
+  @keyframes shake-verticalInicio {
     0%,
     100% {
       -webkit-transform: translateY(0);
