@@ -10,7 +10,7 @@ const GaleriaModelos = () => {
     )
     return (
         <div className={classes.GaleriaModelos}>
-            <h1 className={classes.title}>Nuestros Modelos</h1>
+            <h2 className={classes.title}>Nuestros Modelos</h2>
             <p>Para ver fotos de los modelos visita nuestras redes sociales.</p>
             <span className={classes.shakeVerticalInicio}>{pointer}</span>
             <MediaLinks />

@@ -4,7 +4,7 @@ import classes from "./QuienesSomos.module.css";
 const QuienesSomos = () => {
   return (
     <div className={classes.QuienesSomos}>
-      <h1 className={classes.title}>Quienes Somos</h1>
+      <h2 className={classes.title}>Quienes Somos</h2>
       <section className={classes.section}>
         <p className={classes.paragraph}>
           Somos una empresa familiar que trabaja desde hace mas de 15 años en

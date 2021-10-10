@@ -14,7 +14,7 @@ class Contacto extends Component{
         return ( 
             <div className={classes.Contacto}>
                 <div className={classes.container}>
-                <h1 className={classes.title}>Contacto</h1>
+                <h2 className={classes.title}>Contacto</h2>
 
                     <div className={classes.info}>
                     <span>
