@@ -1,41 +1,56 @@
 .QuienesSomos{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 90%;
-    margin: 10px auto;
+    display: block;
+    min-height: 110vh;
+    background: #73DCB2;
+    width: calc(100% - 16px);
+    margin: 100px auto;
+    padding: 50px 8px;
 }
 
 .title{
     color: #404145;
     align-self: center;
     justify-content: center;
-    margin-bottom: 30px;
+    font-size: 2.5rem;
+    text-align: center;
 }
 
 .section{
     width: 100%;
-    margin: 0 auto;
-    border-top: 1px solid#ccc;
-    padding-top: 10px;
+    
 }
 
 .paragraph{
-    line-height: 30px;
+    line-height: 35px;
     color: #404145;
     text-align: justify;
     white-space: normal;
-    font-size: 1rem;
+    font-size: 1.2rem;
     letter-spacing: 0.08rem;
+    padding: 0 4px;
 }
 
 @media (min-width: 550px){
 
     .QuienesSomos{
         padding: 15px;
-        margin: 40px auto;
+        margin: 50px auto;
+        width: 80%;
+        border-radius: 100px ;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0 30px 40px -3px rgba(0,0,0,0.08),0 15px 10px -2px rgba(0,0,0,0.05);;
     }
     .section{
-        width: 80vh;
+        width: 80%;
+        margin: 0 auto;
     }
+
+    .title{
+        font-size: 3rem;
+    }
+
+    .paragraph{
+        font-size: 1.4rem;
+        line-height: 45px;
+    }
+    
 }

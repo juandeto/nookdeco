@@ -54,7 +54,7 @@ class ResumenRespaldo extends Component {
         this.setState({cantidad: newCantidad});
         this.props.onAmountChange(newCantidad)
     }
-
+console.log('CARACTERISTICAS: ', this.props.caracteristicas)
     return ( 
       
     <React.Fragment >

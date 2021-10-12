@@ -3,11 +3,10 @@
     padding: 15px;
     border-radius: 50%;
     margin: 40px auto;
-    box-shadow:  7px 7px 14px #ebebeb, 
-             -7px -7px 14px #ffffff;
     z-index: 3;
     background-color: rgba(255,255,255,0.8);
     transition: all 0.4s ease;
+    cursor: pointer;
 }
 
 .Logo:hover{
@@ -30,6 +29,7 @@
     letter-spacing: 0.10rem;
     margin-block-end: 1.30em;
     margin-block-start: 0.10em;
+    text-align: center;
 }
 
 @media (min-width: 800px){

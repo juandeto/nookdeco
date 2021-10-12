@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
-
+import Croquis from '../../components/Respaldo/Respaldo/Croquis/Croquis';
 import { Link } from 'react-router-dom';
 import classes from './Home.module.css';
+import Transfer from './transfer.png'
+import QuienesSomos from '/home/juan/nookdeco/nookweb/src/components/QuienesSomos/QuienesSomos.js'
 import NavigationItemsDesktop from './../../components/Navigation/NavigationItemsDesktop/NavigationItemDesktop';
+import MpLogo from './MP.jpg'
+import NookLogo from '/home/juan/nookdeco/nookweb/src/components/Ul/Logo/Logo.js'
+import Contacto from '/home/juan/nookdeco/nookweb/src/components/Contacto/Contacto.js'
+
 
 class Home extends Component {
     state={
@@ -24,18 +30,34 @@ class Home extends Component {
         return ( 
             <div className={classes.Home}>
             <nav className={classes.DesktopOnly}>
-               <NavigationItemsDesktop showSubMenu={this.state.showSubMenu} showSubmenuHandler={this.showSubMenuHandler}/>
+               {/* <NavigationItemsDesktop showSubMenu={this.state.showSubMenu} showSubmenuHandler={this.showSubMenuHandler}/> */}
             </nav>
-            <Link className={classes.respaldoBuilderLink} to="/respaldo-options/respaldo-builder">
-                <div className={classes.container}>
-                    <h3>Personaliza tu respaldo</h3>
+            <div className={classes.landingView}>
+               <div className={classes.col1}>
+                    <h1>Personaliza tu respaldo y te lo fabricamos.</h1>
+                    <Link className={classes.respaldoBuilderLink} to="/respaldo-options/respaldo-builder">
+                        Comenzar
+                    </Link>
+                </div> 
+                <div className={classes.col2}>
+                    <div className={classes.croquisShape}>
+                        <NookLogo />
+                    </div>
                 </div>
-            </Link>
-            <div className={classes.dataDePago}>
-            <p>- Pagando con transferencia bancaria tenés 20% de descuento en el precio final</p>
-            <p>- Ofrecemos cuotas y variedad de tarjetas</p>                
             </div>
-
+                
+            <div className={classes.dataDePago}>
+                <div className={classes.payment}>
+                    <img src={MpLogo} alt="mercadopago logo" />
+                    <h3>Ofrecemos cuotas y variedad de tarjetas</h3>   
+                </div>
+                <div className={classes.paymentBank}>
+                    <h3>Pagando con transferencia bancaria tenés 20% de descuento en el precio final</h3>
+                    <img src={Transfer} alt="transfer by pc illustration" />
+                </div>
+            </div>
+            <QuienesSomos />
+            <Contacto />
             </div>
          );
     }
