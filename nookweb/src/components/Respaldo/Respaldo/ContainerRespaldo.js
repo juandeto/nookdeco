@@ -5,7 +5,6 @@ import Croquis from './Croquis/Croquis';
 
 const Respaldo = (props) => {
 
-
  const arrayClasses=[classes.containerRespaldo];
  let modelo=null;
  let tacha=null;

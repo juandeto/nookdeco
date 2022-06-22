@@ -25,19 +25,19 @@ const initialState = {
 const formas = [
   {
     tipo: "Rectangular",
-    precio: 400,
+    precio: 540,
   },
   {
     tipo: "Capilla",
-    precio: 1300,
+    precio: 2945,
   },
   {
     tipo: "Oval",
-    precio: 1300,
+    precio: 2945,
   },
   {
     tipo: "Esquinas Redondas",
-    precio: 1300,
+    precio: 2945,
   },
 ];
 
@@ -46,37 +46,37 @@ const medidas = [
   {
     altura: 1.20,
     ancho: 1.0,
-    precio: 13000,
+    precio:20250 
   },
   {
     altura: 1.20,
     ancho: 1.4,
-    precio: 13832,
+    precio: 21600,
   },
   {
     altura: 1.20,
     ancho: 1.6,
-    precio: 15340,
+    precio: 23625,
   },
   {
     altura: 1.20,
     ancho: 1.8,
-    precio: 16900,
+    precio: 25515,
   },
   {
     altura: 1.20,
     ancho: 2.0,
-    precio: 21450,
+    precio: 26865,
   },
   {
     altura: 1.20,
     ancho: 2.10,
-    precio: 19500
+    precio: 29565
   },
   {
     altura: 1.20,
     ancho: 2.2,
-    precio: 21320,
+    precio: 30915,
   },
 ];
 
@@ -84,67 +84,67 @@ const medidas = [
 const modelos = [
   {
     tipo: "Liso",
-    precio: 400,
+    precio: 540,
   },
   {
     tipo: "Tacha Grande Separada",
-    precio: 1300,
+    precio: 2945,
   },
   {
     tipo: "Tacha Perimetral",
-    precio: 1950,
+    precio: 3200,
   },
   {
     tipo: "Doble Tacha",
-    precio: 2600,
+    precio: 4200,
   },
   {
     tipo: "Super Doble Tacha Junta",
-    precio: 3250,
+    precio: 4500,
   },
   {
     tipo: "Tacha Junta Interna",
-    precio: 1950,
+    precio: 3500,
   },
   {
     tipo: "Botoné",
-    precio: 1950,
+    precio: 2700,
   },
   {
     tipo: "Capitone",
-    precio: 11050,
+    precio: 14500,
   },
   {
     tipo: "Capitone y Doble Tacha",
-    precio: 15600,
+    precio: 15500,
   },
   {
     tipo: "Canelon Gordo",
-    precio: 11050,
+    precio: 1200,
   },
   {
     tipo: "Canelon Angosto",
-    precio: 12350,
+    precio: 14000,
   },
   {
     tipo: "Canelon Horizontal",
-    precio: 11050,
+    precio: 12000,
   },
   {
     tipo: "Con Funda Lisa",
-    precio: 7800,
+    precio: 9350,
   },
   {
     tipo: "Con Funda Rayada",
-    precio: 9100,
+    precio: 13500,
   },
   {
     tipo: "Con Marco en Paraiso Macizo",
-    precio: 15600,
+    precio: 17500,
   },
   {
     tipo: "Con Marco en Paraiso Macizo y Botones",
-    precio: 17550,
+    precio: 18500,
   },
 ];
 
@@ -179,6 +179,7 @@ const setColor = (state, color) => {
   const updatedState = { respaldo: updatedRespaldo };
   return updateObject(state, updatedState);
 };
+
 const setTacha = (state, tacha, precio) => {
   const updatedRespaldo = updateObject(state.respaldo, {
     tacha: tacha
@@ -186,12 +187,6 @@ const setTacha = (state, tacha, precio) => {
   const updatedState = { respaldo: updatedRespaldo };
   return updateObject(state, updatedState);
 };
-
-// const setTipoDeTacha = (state, tipo) => {
-//   const updatedRespaldo = updateObject(state.respaldo, { tipoTacha: tipo });
-//   const updatedState = { respaldo: updatedRespaldo };
-//   return updateObject(state, updatedState);
-// };
 
 const setModelo = (state, tipo, precio) => {
   const modeloConTacha =/Tacha/g;
@@ -227,8 +222,6 @@ const reducer = (state = initialState, action) => {
       return setColor(state, action.color);
     case actionTypes.SET_TACHA:
       return setTacha(state, action.tacha);
-    // case actionTypes.SET_TIPO_TACHA:
-    //   return setTipoDeTacha(state, action.tipo);
     case actionTypes.SET_MODELO:
       return setModelo(state, action.tipo, action.precio);
     case actionTypes.DISPLAY_TACHA_OPTIONS:
